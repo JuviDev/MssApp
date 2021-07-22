@@ -3,11 +3,8 @@ import { View, Text,ActivityIndicator ,StyleSheet,Image} from 'react-native'
 import firebase from '../database/firebase'
 import Feather from 'react-native-vector-icons/Feather'
 import {Button} from 'react-native-paper'
-
-
 export default function AccountScreen({user}) {
      const [profile,setProfile] = useState('')
-
      useEffect(()=>{
      firebase.db.collection('users').doc(user.uid).get().then(docSnap=>{
         setProfile(docSnap.data())
