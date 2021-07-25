@@ -56,9 +56,9 @@ const Navigation = ()=>{
           title:"WhatsApp"}}> 
          {props => <HomeScreen {...props}  user={user} />}
         </Stack.Screen>
-        <Stack.Screen name="chat" options={({ route }) => ({ title:<View><Text>{route.params.name}</Text><Text>{route.params.status}</Text></View>,
+        <Stack.Screen name="chat" options={({ route }) => ({ title:<View style={styles.title}><Text>{route.params.name}</Text><Text>{route.params.status}</Text></View>,
        headerRight:() => (
-        <View >
+        <View style={styles.avatar} >
           <Avatar
             rounded
             source={{uri:route.params.pic}}/>
@@ -105,6 +105,16 @@ const styles = StyleSheet.create({
    container:{
      flex:1,
      backgroundColor:"white"
+   },
+   avatar:{
+     marginRight: 20
+
+   },
+   title:{
+    //marginLeft: 30,
+    alignItems: 'center',
+    justifyContent: 'center',
+
    }
 });
 

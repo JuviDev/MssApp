@@ -19,7 +19,8 @@ export default function HomeScreen({user,navigation}) {
     const RenderCard = ({item})=>{
           return (
               <TouchableOpacity onPress={()=>navigation.navigate('chat',{name:item.name,uid:item.uid,
-                status :typeof(item.status) =="string"? item.status : item.status.toDate().toString()
+                status :typeof(item.status) =="string"? item.status : item.status.toDate().toString(),
+                pic:item.pic
             })}>
               <View style={styles.mycard}>
                 <Image source={{uri:item.pic}} style={styles.img}/>
