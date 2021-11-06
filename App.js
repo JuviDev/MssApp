@@ -12,9 +12,6 @@ import HomeScreen from './screens/HomeScreen';
 import LoginScreen from './screens/LoginScreen'
 import SignupScreen from './screens/SignupScreen'
 
-if(Platform.OS === "android"){
-  LogBox.ignoreAllLogs()
-}
 
 const Stack = createStackNavigator();
 
