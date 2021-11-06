@@ -53,7 +53,7 @@ const Navigation = ()=>{
         {user?
         <>
         <Stack.Screen name="home"  options={{
-          title:"WhatsApp"}}> 
+          title:"MssApp"}}> 
          {props => <HomeScreen {...props}  user={user} />}
         </Stack.Screen>
         <Stack.Screen name="chat" options={({ route }) => ({ title:<View style={styles.title}><Text>{route.params.name}</Text><Text>{route.params.status}</Text></View>,

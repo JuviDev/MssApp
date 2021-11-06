@@ -1,22 +1,38 @@
 import React,{useState,useEffect} from 'react'
-import { View, Text ,Image,FlatList,StyleSheet,TouchableOpacity} from 'react-native'
+import { View, Text ,Image,FlatList,StyleSheet,TouchableOpacity,ActivityIndicator} from 'react-native'
 import firebase from '../database/firebase';
-import {FAB} from 'react-native-paper'
+import {FAB, Searchbar} from 'react-native-paper'
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 export default function HomeScreen({user,navigation}) {
    // console.log(user)
     const [users,setUsers] = useState(null)
+    const [userss, setUserss] = useState([]);
+    const [searchTerm, setSearchTerm] = useState("");
     const getUsers = async ()=>{
              const querySanp = await firebase.db.collection('users').where('uid','!=',user.uid).get()
              const allusers = querySanp.docs.map(docSnap=>docSnap.data())
             //  console.log(allusers)
-             setUsers(allusers)
+             setUserss(allusers)
     }
+
+    const searchUser= userss.filter((item)=>{
+        return item.name.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
+
+    })
 
     useEffect(()=>{
         getUsers()
     },[])
-
-    const RenderCard = ({item})=>{
+    if(!userss){
+        return  <ActivityIndicator size="large" color="#00ff00" />
+    }
+    return (
+        <>
+        <Searchbar
+                    placeholder="Search..."
+                    onChangeText={(value)=>setSearchTerm(value)}/>
+                    <KeyboardAwareScrollView>
+    {searchUser.map(item => {
           return (
               <TouchableOpacity onPress={()=>navigation.navigate('chat',{name:item.name,uid:item.uid,
                 status :typeof(item.status) =="string"? item.status : item.status.toDate().toString(),
@@ -35,22 +51,15 @@ export default function HomeScreen({user,navigation}) {
               </View>
               </TouchableOpacity>
           )
-    }
-    return (
-        <View style={{flex:1}}>
-            <FlatList 
-              data={users}
-              renderItem={({item})=> {return <RenderCard item={item} /> }}
-              keyExtractor={(item)=>item.uid}
-            />
+    })}
+    </KeyboardAwareScrollView>                  
              <FAB
                 style={styles.fab}
                 icon="face-profile"
                 color="black"
                 onPress={() => navigation.navigate("account")}
-            />
-            
-        </View>
+            />        
+        </>
     )
 }
 

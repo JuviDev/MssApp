@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { View, Text, Image, StyleSheet, KeyboardAvoidingView, TouchableOpacity, ActivityIndicator } from 'react-native'
-import { TextInput, Button } from 'react-native-paper';
+import { TextInput, Button} from 'react-native-paper';
 import firebase from '../database/firebase';
 export default function SignupScreen({ navigation }) {
     const [email, setEmail] = useState('')
@@ -25,15 +25,16 @@ export default function SignupScreen({ navigation }) {
     return (
         <KeyboardAvoidingView behavior="position">
             <View style={styles.box1}>
-                <Text style={styles.text}>Welcome to Whatsapp 5.0</Text>
+                <Text style={styles.text}>Bienvenido a Mss App</Text>
                 <Image style={styles.img} source={require('../assets/icon.png')} />
             </View>
             <View style={styles.box2}>
                 <TextInput
                     label="Email"
+                    mode="outlined"
                     value={email}
                     onChangeText={(text) => setEmail(text)}
-                    mode="outlined"
+                    
                 />
                 <TextInput
                     label="password"
