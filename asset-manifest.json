@@ -1,0 +1,39 @@
+{
+  "files": {
+    "app.js": "/MssApp/static/js/app.221942ae.chunk.js",
+    "app.js.map": "/MssApp/static/js/app.221942ae.chunk.js.map",
+    "runtime~app.js": "/MssApp/static/js/runtime~app.daeec676.js",
+    "runtime~app.js.map": "/MssApp/static/js/runtime~app.daeec676.js.map",
+    "static/js/2.d23141de.chunk.js": "/MssApp/static/js/2.d23141de.chunk.js",
+    "static/js/2.d23141de.chunk.js.map": "/MssApp/static/js/2.d23141de.chunk.js.map",
+    "fonts/AntDesign.ttf": "/MssApp/./fonts/AntDesign.ttf",
+    "fonts/Entypo.ttf": "/MssApp/./fonts/Entypo.ttf",
+    "fonts/Feather.ttf": "/MssApp/./fonts/Feather.ttf",
+    "fonts/FontAwesome.ttf": "/MssApp/./fonts/FontAwesome.ttf",
+    "fonts/FontAwesome5_Brands.ttf": "/MssApp/./fonts/FontAwesome5_Brands.ttf",
+    "fonts/FontAwesome5_Solid.ttf": "/MssApp/./fonts/FontAwesome5_Solid.ttf",
+    "fonts/Fontisto.ttf": "/MssApp/./fonts/Fontisto.ttf",
+    "fonts/Foundation.ttf": "/MssApp/./fonts/Foundation.ttf",
+    "fonts/Ionicons.ttf": "/MssApp/./fonts/Ionicons.ttf",
+    "fonts/MaterialCommunityIcons.ttf": "/MssApp/./fonts/MaterialCommunityIcons.ttf",
+    "fonts/MaterialIcons.ttf": "/MssApp/./fonts/MaterialIcons.ttf",
+    "fonts/SimpleLineIcons.ttf": "/MssApp/./fonts/SimpleLineIcons.ttf",
+    "favicon-16.png": "/MssApp/favicon-16.png",
+    "favicon-32.png": "/MssApp/favicon-32.png",
+    "favicon.ico": "/MssApp/favicon.ico",
+    "index.html": "/MssApp/index.html",
+    "manifest.json": "/MssApp/manifest.json",
+    "serve.json": "/MssApp/serve.json",
+    "static/js/2.d23141de.chunk.js.LICENSE.txt": "/MssApp/static/js/2.d23141de.chunk.js.LICENSE.txt",
+    "static/media/bell.png": "/MssApp/static/media/bell.cf04af27.png",
+    "static/media/heart.png": "/MssApp/static/media/heart.23b5c2c0.png",
+    "static/media/icon.png": "/MssApp/static/media/icon.ef3567b5.png",
+    "static/media/rocket.png": "/MssApp/static/media/rocket.d2f3bf41.png",
+    "static/media/star.png": "/MssApp/static/media/star.69c71386.png"
+  },
+  "entrypoints": [
+    "static/js/runtime~app.daeec676.js",
+    "static/js/2.d23141de.chunk.js",
+    "static/js/app.221942ae.chunk.js"
+  ]
+}
